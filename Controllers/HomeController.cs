@@ -6,8 +6,17 @@ namespace Ahorcado.Controllers
 {
     public class HomeController : Controller
     {
+
         public IActionResult Index()
+{
+    Juego.inicializarJuego();
+    return View("Index");
+}
+
+        public IActionResult juego()
         {
+             
+           
             if (Juego.JuegoFinalizado())
             {
                 if (Juego.JugadorGano())
@@ -26,7 +35,7 @@ namespace Ahorcado.Controllers
             ViewBag.Intentos = Juego.ObtenerIntentos();
             ViewBag.LetrasUsadas = Juego.ObtenerLetrasUsadas();
 
-            return View("Index");
+            return View("Juego");
         }
 
         [HttpPost]
@@ -34,14 +43,14 @@ namespace Ahorcado.Controllers
         {
                 char letrita = letra[0];
                 Juego.tirarLetra(letrita);
-                 return Index(); 
+                 return juego(); 
         }
 
         [HttpPost]
         public IActionResult tirarPalabra(string palabra)
         {
                 Juego.tirarPalabra(palabra);
-               return Index();
+               return juego();
         }
     }
 }

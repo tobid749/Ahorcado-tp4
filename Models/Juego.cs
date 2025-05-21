@@ -7,12 +7,12 @@ namespace Ahorcado.Models
 {
     public static class Juego
     {
-        public static string palabra = "jazz";
-        public static int intentos = 0;
-        public static List<char> letrasUsadas = new List<char>();
-        private static char[] progreso = palabra.Select(c => '_').ToArray();//nos dijo angie que lo busquemos en google
-        private static bool juegoFinalizado = false;
-        private static bool jugadorGano = false;
+        public static string palabra;
+        public static int intentos;
+        public static List<char> letrasUsadas;
+        private static char[] progreso;
+        private static bool juegoFinalizado;
+        private static bool jugadorGano;
 
         
 
@@ -43,6 +43,14 @@ namespace Ahorcado.Models
             {
                 intentos++; 
             }
+        }
+           public static void inicializarJuego(){
+            palabra = "jazz";
+            intentos = 0;
+            letrasUsadas = new List<char>();
+            progreso = palabra.Select(c => '_').ToArray();//nos dijo angie que lo busquemos en google
+            juegoFinalizado = false;
+            jugadorGano = false;
         }
 
         public static void tirarPalabra(string palabraArriesgada)
@@ -99,5 +107,6 @@ namespace Ahorcado.Models
         {
             return palabra;
         }
+     
     }
 }

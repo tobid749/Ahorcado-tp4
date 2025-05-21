@@ -1,9 +1,21 @@
 .perdiste{
   background-color: red;
 }
-.index{
-  background-color: yellow;
+.Juego{
+  background-color: rgb(72, 207, 207);
 }
 .ganaste{
   background-color: green;
+}
+.Index{
+  background-color: yellow;
+}
+h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: solid;
+  text-align: center;
+  font-size: larger;
+}
+p, label{
+  font-family: cursive;
 }
