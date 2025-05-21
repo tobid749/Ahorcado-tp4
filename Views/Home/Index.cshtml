@@ -1,8 +1,32 @@
-﻿@{
-    ViewData["Title"] = "Index";
+﻿<div class="index"> 
+@{
+    ViewBag.Title = "Ahorcado";
 }
 
-<div>
-    <h1>Index</h1>
-    <p>Bienvenidos al sitio web de NombreProyecto</p>
+<h1>Ahorcado</h1>
+
+<p>Palabra:@ViewBag.Palabra</p>
+
+<p>Intentos:@ViewBag.Intentos</p>
+
+<p>Letras usadas:
+    @foreach (char letra in (List<char>)ViewBag.LetrasUsadas)
+    {
+    @letra 
+    }
+</p>
+
+<form method="post" asp-action="tirarLetra">
+    <label>arriesgar letra:</label>
+    <input type="text" name="letra" />
+    <button type="submit">Probar letra</button>
+</form>
+
+<br/>
+
+<form method="post" asp-action="tirarPalabra">
+    <label>arriesgar palabra:</label>
+    <input type="text" name="palabra" required />
+    <button type="submit">Arriesgar</button>
+</form>
 </div>

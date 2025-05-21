@@ -1,29 +1,103 @@
+
+
+using System.Collections.Generic;
+using System.Linq;
+
 namespace Ahorcado.Models
 {
     public static class Juego
     {
-        public static string palabra;
-        public static int intentos;
-        public static List<char> letrasUsadas;
-        private static List<char> progreso;
-        private static bool juegoFinalizado;
+        public static string palabra = "jazz";
+        public static int intentos = 0;
+        public static List<char> letrasUsadas = new List<char>();
+        private static char[] progreso = palabra.Select(c => '_').ToArray();//nos dijo angie que lo busquemos en google
+        private static bool juegoFinalizado = false;
+        private static bool jugadorGano = false;
 
-        static Juego()
+        
+
+        public static void tirarLetra(char letra)
         {
-            reiniciar();
+            if (juegoFinalizado || letrasUsadas.Contains(letra))
+                return;
+
+            letrasUsadas.Add(letra);
+
+            if (palabra.Contains(letra))
+            {
+                for (int i = 0; i < palabra.Length; i++)
+                {
+                    if (palabra[i] == letra)
+                    {
+                        progreso[i] = letra;
+                    }
+                }
+
+                if (!progreso.Contains('_'))
+                {
+                    juegoFinalizado = true;
+                    jugadorGano = true;
+                }
+            }
+            else
+            {
+                intentos++; 
+            }
         }
 
-        public static void reiniciar()
+        public static void tirarPalabra(string palabraArriesgada)
         {
-            palabra = "ESDRUJULA";
-            progreso = palabra.Select(c => '_').ToList();
-            letrasUsadas = new List<char>();
-            intentos = 0;
-            juegoFinalizado = false;
+            if (juegoFinalizado)
+            {
+                return;
+}
+            if (palabraArriesgada == palabra)
+            {
+                for (int i = 0; i < palabra.Length; i++)
+                    progreso[i] = palabra[i];
+
+                juegoFinalizado = true;
+                jugadorGano = true;
+            }
+            else
+            {
+                juegoFinalizado = true;
+                jugadorGano = false;
+            }
+        }
+        public static string ObtenerProgreso()
+        {
+            string palabra="";
+            for (int i = 0; i < progreso.Length; i++)
+            {
+               palabra+= progreso[i] +" ";
+            }
+            return palabra;
+        }
+
+        public static List<char> ObtenerLetrasUsadas()
+        {
+            return letrasUsadas;
+        }
+
+        public static int ObtenerIntentos()
+        {
+            return intentos;
+        }
+
+        public static bool JuegoFinalizado()
+        {
+            return juegoFinalizado;
+        }
+
+        public static bool JugadorGano()
+        {
+            return jugadorGano;
+        }
+
+        public static string ObtenerPalabra()
+        {
+            return palabra;
         }
     }
 }
-  
-
-    
-

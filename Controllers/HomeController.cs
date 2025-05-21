@@ -1,20 +1,47 @@
-using System.Diagnostics;
+
 using Microsoft.AspNetCore.Mvc;
 using Ahorcado.Models;
 
-namespace Ahorcado.Controllers;
-
-public class HomeController : Controller
+namespace Ahorcado.Controllers
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    public class HomeController : Controller
     {
-        _logger = logger;
-    }
+        public IActionResult Index()
+        {
+            if (Juego.JuegoFinalizado())
+            {
+                if (Juego.JugadorGano())
+                {
+                    ViewBag.Palabra = Juego.ObtenerPalabra();
+                    return View("Ganaste");
+                }
+                else
+                {
+                    ViewBag.Palabra = Juego.ObtenerPalabra();
+                    return View("Perdiste");
+                }
+            }
 
-    public IActionResult Index()
-    {
-        return View();
+            ViewBag.Palabra = Juego.ObtenerProgreso();
+            ViewBag.Intentos = Juego.ObtenerIntentos();
+            ViewBag.LetrasUsadas = Juego.ObtenerLetrasUsadas();
+
+            return View("Index");
+        }
+
+        [HttpPost]
+        public IActionResult tirarLetra(string letra)
+        {
+                char letrita = letra[0];
+                Juego.tirarLetra(letrita);
+                 return Index(); 
+        }
+
+        [HttpPost]
+        public IActionResult tirarPalabra(string palabra)
+        {
+                Juego.tirarPalabra(palabra);
+               return Index();
+        }
     }
 }

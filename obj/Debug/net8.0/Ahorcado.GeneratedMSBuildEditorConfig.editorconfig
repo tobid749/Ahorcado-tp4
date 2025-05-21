@@ -9,31 +9,39 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Ahorcado
 build_property.RootNamespace = Ahorcado
-build_property.ProjectDir = z:\Ahorcado\
+build_property.ProjectDir = C:\Users\49373638\Documents\Ahorcado-tp4\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = z:\Ahorcado
+build_property.MSBuildProjectDirectory = C:\Users\49373638\Documents\Ahorcado-tp4
 build_property._RazorSourceGeneratorDebug = 
 
-[z:/Ahorcado/Views/Home/Index.cshtml]
+[C:/Users/49373638/Documents/Ahorcado-tp4/Views/Home/Ganaste.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHYW5hc3RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/49373638/Documents/Ahorcado-tp4/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[z:/Ahorcado/Views/Shared/_Layout.cshtml]
+[C:/Users/49373638/Documents/Ahorcado-tp4/Views/Home/Perdiste.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQZXJkaXN0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/49373638/Documents/Ahorcado-tp4/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[z:/Ahorcado/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/49373638/Documents/Ahorcado-tp4/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[z:/Ahorcado/Views/_ViewImports.cshtml]
+[C:/Users/49373638/Documents/Ahorcado-tp4/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[z:/Ahorcado/Views/_ViewStart.cshtml]
+[C:/Users/49373638/Documents/Ahorcado-tp4/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
