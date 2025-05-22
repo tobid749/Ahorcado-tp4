@@ -1,21 +1,49 @@
 .perdiste{
   background-color: red;
+  border-radius: 15px;
+
 }
 .Juego{
-  background-color: rgb(72, 207, 207);
+  background-color:  #20a9d9;
+  border-radius: 15px;
+
 }
 .ganaste{
   background-color: green;
+  border-radius: 15px;
 }
 .Index{
-  background-color: yellow;
+  background-color:#12364e;
+  border-radius: 15px;
 }
 h1{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: solid;
   text-align: center;
   font-size: larger;
+  text-decoration: underline;
+  color: #20dad8;
 }
 p, label{
   font-family: cursive;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  color: #20dad8;
+}
+button
+{
+  border-radius: 10%;
+  background-color: #156993;
+color: #20dad8;
+}
+
+a{
+  margin-left: 0.5%;
+  color: #20dad8;
+}
+body {
+  background-color: #20dad8;
+}
+footer{
+  margin-top: 3%;
 }
